@@ -29,10 +29,10 @@ class MyApp extends StatelessWidget {
 
         body: GridView(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-            mainAxisSpacing: 2.0,
-            crossAxisSpacing: 2.0,
-            childAspectRatio: 0.7  //长宽比
+            crossAxisCount: 3,     //一行的widget数量
+            mainAxisSpacing: 2.0,   //垂直子widget间距
+            crossAxisSpacing: 2.0,  //水平子Widget间距
+            childAspectRatio: 0.7  //子widget宽高比
           ),
           children: <Widget>[
             new Image.network('https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=296702356,1523382013&fm=26&gp=0.jpg',fit: BoxFit.cover,),
