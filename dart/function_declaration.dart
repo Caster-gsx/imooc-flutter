@@ -5,6 +5,7 @@ void main(List<String> args) {
 
   printPerson('tom', 20);
   getSex();
+  print('-------------------------');
 
   //可选参数
   printPerson1('张三');
@@ -16,6 +17,13 @@ void main(List<String> args) {
   printPerson2('李四', 20);
   printPerson2('李四', 20, 'male');
   printPerson2('李四', 'male');
+  print('-------------------------');
+
+  //默认参数
+  printPerson3('王五');
+  printPerson3('王五', age: 30);
+  printPerson3('王五', age: 30, gender: 'female');
+  printPerson3('王五', gender: 'female');
 }
 
 String getPerson(name, age) {
@@ -36,3 +44,8 @@ getSex() => print(gender == 0 ? '男' : '女') ;
 printPerson1(name, { age, gender }) => print('name=$name, age=$age, gender=$gender');
 
 printPerson2(name, [age, gender]) => print('name=$name, age=$age, gender=$gender');
+
+
+//默认参数
+
+printPerson3(name, {age=28, gender='male'}) => print('name=$name, age=$age, gender=$gender');
