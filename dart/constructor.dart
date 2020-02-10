@@ -23,3 +23,28 @@ class Person{
     print('I am learning...');
   }
 }
+
+//常量构造方法 
+// 使用const声明构造方法，并且所有变量都为final
+
+//工厂构造方法
+// 在构造方法前添加关键字factory
+// 工厂构造方法中可返回对象
+// class Logger{
+//   final String name;
+
+//   static final Map<String, Logger> _cache = <String, Logger>{};
+
+//   factory Logger(String name){
+//     if(_cache.containsKey(name)){
+//       return _cache[name];
+//     }else{
+//       final logger = Logger._internal(name);
+//       _cache[name] = logger;
+//       return logger;
+//     }
+//   }
+
+//   Logger._internal(this.name);
+  
+// }
